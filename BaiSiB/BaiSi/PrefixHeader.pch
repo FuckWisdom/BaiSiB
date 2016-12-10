@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  BaiSi
+//
+//  Created by harrypch on 2016/12/7.
+//  Copyright © 2016年 harrypch. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+XXExtension.h"
+
+
+#endif /* PrefixHeader_pch */
