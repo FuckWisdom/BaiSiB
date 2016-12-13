@@ -16,7 +16,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    //设置状态栏内容
+    self.navigationItem.title = @"我的";
+    
+    //设置导航栏左边按钮
+    UIButton *settingButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [settingButton setBackgroundImage:[UIImage imageNamed:@"mine-setting-icon"] forState:UIControlStateNormal];
+    [settingButton setBackgroundImage:[UIImage imageNamed:@"mine-setting-icon-click"] forState:UIControlStateHighlighted];
+    
+    settingButton.size = settingButton.currentBackgroundImage.size;
+    
+    
+    settingButton.size = settingButton.currentBackgroundImage.size;
+    
+    [settingButton addTarget:self action:@selector(settingButton) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:settingButton];
+    
+    
+}
+
+- (void)settingButton
+{
+    XXLog(@"%s",__func__);
 }
 
 - (void)didReceiveMemoryWarning {

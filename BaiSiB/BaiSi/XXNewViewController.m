@@ -16,7 +16,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //设置状态栏内容
+    self.navigationItem.titleView = [[UIImageView alloc] initWithImage: [UIImage imageNamed:@"MainTitle"]];
+    
+    //设置导航栏左边按钮
+    UIButton *tagButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [tagButton setBackgroundImage:[UIImage imageNamed:@"MainTagSubIcon"] forState:UIControlStateNormal];
+    [tagButton setBackgroundImage:[UIImage imageNamed:@"MainTagSubIconClick"] forState:UIControlStateHighlighted];
+    
+    tagButton.size = tagButton.currentBackgroundImage.size;
+    
+    
+    tagButton.size = tagButton.currentBackgroundImage.size;
+    
+    [tagButton addTarget:self action:@selector(tagClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:tagButton];
+    
+    
+}
+
+- (void)tagClick
+{
+    XXLog(@"%s",__func__);
 }
 
 - (void)didReceiveMemoryWarning {
