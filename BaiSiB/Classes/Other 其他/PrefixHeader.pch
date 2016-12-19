@@ -10,7 +10,7 @@
 #define PrefixHeader_pch
 
 #import "UIView+XXExtension.h"
-
+#import "UIBarButtonItem+XXExtension.h"
 
 
 #ifdef DEBUG

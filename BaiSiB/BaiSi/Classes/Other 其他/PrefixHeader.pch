@@ -19,7 +19,12 @@
 #define XXLog(...) 
 #endif
 
+#define XXLogFunc XXLog(@"%s",__func__)
 
 
+
+#define XXRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 gerrn:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+#define XXGlobalbg XXRGBColor(223, 223, 223)
 
 #endif /* PrefixHeader_pch */
