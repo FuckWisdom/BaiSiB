@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  BaiSi
+//
+//  Created by harrypch on 2016/12/7.
+//  Copyright © 2016年 harrypch. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "UIView+XXExtension.h"
+#import "UIBarButtonItem+XXExtension.h"
+
+
+#ifdef DEBUG
+#define XXLog(...) NSLog(__VA_ARGS__)
+#else
+#define XXLog(...) 
+#endif
+
+
+
+
+#endif /* PrefixHeader_pch */
